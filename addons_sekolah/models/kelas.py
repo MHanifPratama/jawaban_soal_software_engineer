@@ -6,5 +6,6 @@ class Kelas(models.Model):
     _rec_name = 'nm_kelas'
     
     nm_kelas = fields.Char('Nama Kelas')
-    nm_siswa = fields.Many2one('siswa', string='Nama Siswa')
+    jadwal_ids = fields.One2many('jadwal', 'kelas', string='Jadwal')
+    nm_siswa = fields.One2many('siswa', 'kelas_ids', string='Nama Siswa')
     wali_kelas = fields.Many2many('guru', string='Guru')

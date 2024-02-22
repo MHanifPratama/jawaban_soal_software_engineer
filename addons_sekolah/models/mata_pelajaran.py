@@ -6,7 +6,7 @@ class MataPelajaran(models.Model):
     
     nm_matapelajaran = fields.Char('Nama Matapelajaran')
     mata_pelajaran_ids = fields.One2many('jadwal', 'mata_pelajaran', string='Mata Pelajaran')
-    guru_ids = fields.One2many('guru', 'mata_pelajaran', string='Guru')
+    guru_id = fields.Many2one('guru', string='Guru')
     jurusan = fields.Char('Jurusan')
     
     def name_get(self):
