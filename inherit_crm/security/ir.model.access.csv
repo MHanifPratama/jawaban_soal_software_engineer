@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_master_product,inherit_crm.master_product,model_master_product,base.group_user,1,1,1,1
+access_task_progress,inherit_crm.task_progress,model_task_progress,base.group_user,1,1,1,1

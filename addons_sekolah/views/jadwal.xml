@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="addons_sekolah.jadwal_list">
+      <field name="name">jadwal list</field>
+      <field name="model">jadwal</field>
+      <field name="arch" type="xml">
+            <tree>
+                <field name="hari"/>
+                <field name="kelas"/>
+                <field name="jam"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="addons_sekolah.jadwal_view_form" model="ir.ui.view">
+        <field name="name">jadwal form</field>
+        <field name="model">jadwal</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="hari"/>
+                        <field name="kelas"/>
+                        <field name="jam"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="jadwal_action_window">
+      <field name="name">jadwal window</field>
+      <field name="res_model">jadwal</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+
+    <menuitem name="jadwal" id="addons_sekolah.jadwal_menu" parent="addons_sekolah.master_siswa_menu"
+              action="jadwal_action_window"/>
+  </data>
+</odoo>

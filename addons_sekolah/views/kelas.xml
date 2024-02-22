@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="addons_sekolah.kelas_list">
+      <field name="name">kelas list</field>
+      <field name="model">kelas</field>
+      <field name="arch" type="xml">
+            <tree>
+                <field name="nm_kelas"/>
+                <field name="nm_siswa"/>
+                <field name="wali_kelas"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="addons_sekolah.kelas_view_form" model="ir.ui.view">
+        <field name="name">kelas form</field>
+        <field name="model">kelas</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="nm_kelas"/>
+                        <field name="nm_siswa"/>
+                        <field name="wali_kelas"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="kelas_action_window">
+      <field name="name">kelas window</field>
+      <field name="res_model">kelas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- actions -->
+
+    <menuitem name="kelas" id="addons_sekolah.kelas_menu" parent="addons_sekolah.master_siswa_menu"
+              action="kelas_action_window"/>
+  </data>
+</odoo>

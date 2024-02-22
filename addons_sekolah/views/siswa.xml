@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="addons_sekolah.siswa_list">
+      <field name="name">siswa list</field>
+      <field name="model">siswa</field>
+      <field name="arch" type="xml">
+            <tree>
+                <field name="nis"/>
+                <field name="nm_siswa"/>
+                <field name="jns_kelamin"/>
+                <field name="tgl_lahir"/>
+                <field name="agama"/>
+                <field name="nm_ayah"/>
+                <field name="nm_ibu"/>
+                <field name="usia"/>
+                <field name="alamat"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="addons_sekolah.siswa_view_form" model="ir.ui.view">
+        <field name="name">siswa form</field>
+        <field name="model">siswa</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="nis"/>
+                        <field name="nm_siswa"/>
+                        <field name="jns_kelamin"/>
+                        <field name="tgl_lahir"/>
+                        <field name="agama"/>
+                        <field name="nm_ayah"/>
+                        <field name="nm_ibu"/>
+                        <field name="usia"/>
+                        <field name="alamat"/>
+                        <field name="kelas_ids" >
+                            <tree>
+                                <field name="nm_kelas"/>
+                                <field name="wali_kelas"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="addons_sekolah.siswa_action_window">
+      <field name="name">siswa window</field>
+      <field name="res_model">siswa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+    <menuitem name="Addons Sekolah" id="addons_sekolah.menu_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Master" id="addons_sekolah.master_siswa_menu" parent="addons_sekolah.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Siswa" id="addons_sekolah.siswa_menu_action" parent="addons_sekolah.master_siswa_menu" action="addons_sekolah.siswa_action_window"/>
+ 
+  </data>
+</odoo>

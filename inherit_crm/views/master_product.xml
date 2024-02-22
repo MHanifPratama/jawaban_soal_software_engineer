@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="master_product_view_tree" model="ir.ui.view">
+            <field name="name">master_product.view.tree</field>
+            <field name="model">master.product</field>
+            <field name="arch" type="xml">
+                <tree string="Master Product">
+                    <field name="product_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="master_product_view_form" model="ir.ui.view">
+            <field name="name">master_product.view.form</field>
+            <field name="model">master.product</field>
+            <field name="arch" type="xml">
+                <form string="Master Product">
+                    <sheet>
+                        <group>
+                            <field name="product_name"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="master_product_action" model="ir.actions.act_window">
+            <field name="name">Master Produk</field>
+            <field name="res_model">master.product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="master_product_menu_list" 
+            name="Task  Name" 
+            parent="crm.crm_menu_config"
+            action="master_product_action" 
+            sequence="1"/>
+    </data>
+    
+    
+
+</odoo>

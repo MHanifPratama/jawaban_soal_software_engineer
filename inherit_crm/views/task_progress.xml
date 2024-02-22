@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="task_progress_view_tree" model="ir.ui.view">
+            <field name="name">task_progress.view.tree</field>
+            <field name="model">task.progress</field>
+            <field name="arch" type="xml">
+                <tree string="Master Data">
+                    <field name="task_name"/>
+                    <field name="deadline"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="task_progress_view_form" model="ir.ui.view">
+            <field name="name">task_progress.view.form</field>
+            <field name="model">task.progress</field>
+            <field name="arch" type="xml">
+                <form string="Master Data">
+                    <sheet>
+                        <group>
+                            <field name="task_name"></field>
+                            <field name="deadline"></field>
+                            <field name="state"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="task_progress_action" model="ir.actions.act_window">
+            <field name="name">Master Data</field>
+            <field name="res_model">task.progress</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="task_progress_menu_list" 
+            name="Master Data" 
+            parent="crm.crm_menu_config"
+            action="task_progress_action" 
+            sequence="1"/>
+    </data>
+    
+    
+
+</odoo>
