@@ -29,6 +29,7 @@
         'views/kelas.xml',
         'views/jadwal.xml',
         'views/mata_pelajaran.xml',
+        'views/guru.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -7,4 +7,4 @@ class Kelas(models.Model):
     
     nm_kelas = fields.Char('Nama Kelas')
     nm_siswa = fields.Many2one('siswa', string='Nama Siswa')
-    wali_kelas = fields.Char('Wali Kelas')    
+    wali_kelas = fields.Many2many('guru', string='Guru')

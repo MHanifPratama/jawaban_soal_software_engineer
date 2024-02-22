@@ -3,3 +3,4 @@ access_kelas,addons_sekolah.kelas,model_kelas,base.group_user,1,1,1,1
 access_siswa,addons_sekolah.siswa,model_siswa,base.group_user,1,1,1,1
 access_jadwal_sekolah,addons_sekolah.jadwal,model_jadwal,base.group_user,1,1,1,1
 access_matapelajaran,addons_sekolah.matapelajaran,model_matapelajaran,base.group_user,1,1,1,1
+access_guru,addons_sekolah.guru,model_guru,base.group_user,1,1,1,1
