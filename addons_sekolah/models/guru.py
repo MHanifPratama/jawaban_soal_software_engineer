@@ -12,7 +12,9 @@ class Guru(models.Model):
         ('wanita', 'Wanita')
     ], string='Jenis Kelamin')
     mata_pelajaran = fields.Many2one('matapelajaran', string='mata_pelajaran')
-    kelas_ids = fields.Many2many('kelas', string='Kelas')
+    # kelas_ids = fields.Many2many('kelas', string='Kelas')
+    kelas_ids = fields.One2many('kelas', 'wali_kelas', string='kelas')
+
     usia = fields.Integer('Usia')
     no_telp = fields.Char('Nomor Telepon')
     alamat = fields.Text('Alamat')

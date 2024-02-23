@@ -34,7 +34,7 @@
         </record>
 
         <menuitem id="master_product_menu_list" 
-            name="Task  Name" 
+            name="Master Data" 
             parent="crm.crm_menu_config"
             action="master_product_action" 
             sequence="1"/>

@@ -8,7 +8,7 @@ class Siswa(models.Model):
 
     nis = fields.Char("NIS")
     nm_siswa = fields.Char("Nama Siswa")
-    kelas_ids = fields.One2many('kelas', 'nm_siswa', string='kelas')
+    kelas_ids = fields.Many2many('kelas', string='kelas')
     jns_kelamin = fields.Selection([
         ('pria', 'Pria'),
         ('wanita', 'Wanita')

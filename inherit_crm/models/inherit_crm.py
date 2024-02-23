@@ -14,3 +14,4 @@ class InheritCRM(models.Model):
         ('lainnya','Lainya')
     ], string='Segment Customer')
     task_progress_ids = fields.One2many('task.progress', 'task_progress_id', string='task_progress')
+    product_segment_id = fields.Many2one('master.product', string='Segment Product')
